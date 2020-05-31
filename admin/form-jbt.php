@@ -102,21 +102,6 @@ if (isset($_GET['idjb'])) {
                   <li class="active">Tambah Data jabatan</li>
                 </ol>
               </div>
-              <!-- <div class="col s2 m6 l6">
-                  <a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="#!" data-activates="dropdown1">
-                      <i class="material-icons hide-on-med-and-up">settings</i>
-                      <span class="hide-on-small-onl">Settings</span>
-                      <i class="material-icons right">arrow_drop_down</i>
-                    </a>
-                  <ul id="dropdown1" class="dropdown-content">
-                    <li><a href="#!" class="grey-text text-darken-2">Access<span class="badge">1</span></a>
-                    </li>
-                    <li><a href="#!" class="grey-text text-darken-2">Profile<span class="new badge">2</span></a>
-                    </li>
-                    <li><a href="#!" class="grey-text text-darken-2">Notifications</a>
-                    </li>
-                  </ul>
-                </div> -->
             </div>
           </div>
         </div>
@@ -160,15 +145,15 @@ if (isset($_GET['idjb'])) {
                         <i class="material-icons prefix">trending_up</i>
                         <select name="akses">
                           <option value="" disabled selected>Pilih Level</option>
-                          <option <?php if ($isi_akses == $Data['Admin']) {
-                                    echo "selected";
-                                  } ?>>Admin</option>
-                          <option <?php if ($isi_akses == $Data['Atasan']) {
-                                    echo "selected";
-                                  } ?>>Atasan</option>
-                          <option <?php if ($isi_akses == $Data['Karyawan']) {
-                                    echo "selected";
-                                  } ?>>Karyawan</option>
+                          <option value="Admin" <?php if ($isi_akses == 'Admin') {
+                                                    echo "selected";
+                                                  } ?>>Admin</option>
+                          <option value="Atasan" <?php if ($isi_akses == 'Atasan') {
+                                                    echo "selected";
+                                                  } ?>>Atasan</option>
+                          <option value="Karyawan" <?php if ($isi_akses == 'Karyawan') {
+                                                    echo "selected";
+                                                  } ?>>Karyawan</option>
                         </select>
                         <label>Pilih Level</label>
                       </div>
